@@ -1,0 +1,38 @@
+@import url("../../styles/fonts.css");
+
+.header {
+  background-color: #000000;
+  color: #FFFFFF;
+  font-family: 'Apercu-Regular', Calibri, sans-serif;
+  font-size: 0.98rem;
+  letter-spacing: .0625rem;
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.header > div {
+  max-width: 460px;
+}
+
+.headerText{
+  flex: 1;
+}
+
+@media only screen and (max-width: 480px){
+  .makeItBetterText {
+    display: none;
+  }
+  .header {
+    font-size: 0.8rem;
+
+  }
+}

@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: 'Rob-Bold';
+  src: url('assets/fonts/RobotoSlab-Bold.eot');
+  src: local('☺'), url('assets/fonts/RobotoSlab-Bold.woff') format('woff'), url('assets/fonts/RobotoSlab-Bold.ttf') format('truetype'), url('assets/fonts/RobotoSlab-Bold.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Quick-Regular';
+  src: url('assets/fonts/Quicksand-Regular.eot');
+  src: local('☺'), url('assets/fonts/Quicksand-Regular.woff') format('woff'), url('assets/fonts/Quicksand-Regular.ttf') format('truetype'), url('assets/fonts/Quicksand-Regular.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Quick-Light';
+  src: url('assets/fonts/Quicksand-Light.eot');
+  src: local('☺'), url('assets/fonts/Quicksand-Light.woff') format('woff'), url('assets/fonts/Quicksand-Light.ttf') format('truetype'), url('assets/fonts/Quicksand-Light.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Apercu-Regular';
+  src: url('assets/fonts/Apercu-Light.eot');
+  src: local('☺'), url('assets/fonts/Apercu-Light.woff') format('woff'), url('assets/fonts/Apercu-Light.ttf') format('truetype'), url('assets/fonts/Apercu-Light.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

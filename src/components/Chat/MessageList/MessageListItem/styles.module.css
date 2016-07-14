@@ -1,0 +1,26 @@
+.listItem {
+  max-width: 460px;
+  margin: 0 auto;
+}
+
+.client {
+  float: right;
+}
+
+.server {
+
+}
+
+.messageText {
+  padding: 0.5rem 1rem;
+  background: #FFFFFF;
+  display: inline-block;
+  border-radius: 0.4rem;
+  border-top-left-radius: 0.1rem;
+}
+
+@media (min-width: 460px) {
+  .listItem {
+    max-width: 590px;
+  }
+}

@@ -1,0 +1,16 @@
+@import url('styles/colors.css');
+@import url('styles/fonts.css');
+
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+  background: #fff;
+  color: #121212;
+  font-family: 'Quick-Regular';
+}
+
+body > div {
+  height: 100%;
+}

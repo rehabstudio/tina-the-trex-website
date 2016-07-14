@@ -1,0 +1,8 @@
+.chatBox {
+  flex: auto;
+  overflow-y: scroll;
+}
+
+.messageList li {
+  list-style: none;
+}

@@ -1,0 +1,29 @@
+.messageComposer {
+  border-top: 1px solid #ececec;
+  background-color: #FFFFFF;
+  flex: none;
+}
+
+.messageComposer > div {
+  max-width: 700px;
+  margin: auto;
+  position: relative;
+}
+
+.messageComposer input {
+  border-width: 0;
+  outline: none;
+  width: 100%;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-left: 1rem;
+}
+
+.sendButton {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 1rem;
+  margin: auto;
+}

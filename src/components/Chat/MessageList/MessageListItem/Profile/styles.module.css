@@ -1,0 +1,33 @@
+.profileContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 460px;
+}
+
+.profile {
+  max-width: 105px;
+  display: table-cell;
+  vertical-align: middle;
+  height: 5rem;
+  width: 5rem;
+}
+
+.user {
+}
+
+.trex {
+  background-image: url(assets/images/rex.png);
+  background-size: cover;
+  color: blue;
+}
+
+.sender {
+  flex: 1;
+  align-self: flex-end;
+  font-family: 'Rob-Bold', serif;
+  font-size: 1.250rem;
+  padding: 0 0.5rem;
+  margin: 0 0 0.5rem;
+}
