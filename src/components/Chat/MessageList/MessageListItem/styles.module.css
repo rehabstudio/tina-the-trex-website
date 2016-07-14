@@ -4,7 +4,7 @@
 }
 
 .client {
-  float: right;
+  text-align: right;
 }
 
 .server {
