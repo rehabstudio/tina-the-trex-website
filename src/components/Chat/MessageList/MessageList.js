@@ -14,8 +14,6 @@ class MessageList extends React.Component {
     if (this.shouldScrollBottom) {
       let node = ReactDOM.findDOMNode(this.refs.messageList);
       node.scrollTop = node.scrollHeight;
-      console.log(node.scrollTop);
-      console.log(node.scrollHeight);
     }
   }
 
