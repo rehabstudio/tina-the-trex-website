@@ -15,7 +15,6 @@
   "license": "Apache-2.0",
   "dependencies": {
     "classnames": "^2.2.5",
-    "font-awesome": "^4.6.3",
     "normalize.css": "^4.2.0",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
@@ -24,7 +23,8 @@
     "react-router-redux": "^4.0.5",
     "redux": "^3.5.2",
     "redux-logger": "^2.6.1",
-    "redux-thunk": "^2.1.0"
+    "redux-thunk": "^2.1.0",
+    "whatwg-fetch": "^1.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.6",

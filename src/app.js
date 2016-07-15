@@ -21,10 +21,10 @@ const history = syncHistoryWithStore(browserHistory, store);
 
 setTimeout(() => {
   store.dispatch(
-    actions.receiveMessage({
-      id: 'm_' + Date.now(),
+    actions.receiveServerMessage({
       text: INTRO_MESSAGE,
-      sender: SERVER_USER_NAME
+      sender: SERVER_USER_NAME,
+      conversation_id: ''
     })
   );
 }, 1500);

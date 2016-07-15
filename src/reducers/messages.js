@@ -4,11 +4,11 @@ const initialState = [];
 
 const message = (state, action) => {
   switch (action.type) {
-    case actionTypes.CREATE_MESSAGE:
-    case actionTypes.RECEIVE_MESSAGE:
+    case actionTypes.SEND_CLIENT_MESSAGE:
+    case actionTypes.RECEIVE_SERVER_MESSAGE:
       return {
-        id: action.id,
         text: action.message.text,
+        conversation_id: action.message.conversation_id,
         sender: action.message.sender
       };
   }
@@ -16,8 +16,8 @@ const message = (state, action) => {
 
 const messages = (state = initialState, action) => {
   switch (action.type) {
-    case actionTypes.CREATE_MESSAGE:
-    case actionTypes.RECEIVE_MESSAGE:
+    case actionTypes.SEND_CLIENT_MESSAGE:
+    case actionTypes.RECEIVE_SERVER_MESSAGE:
       return [
         ...state,
         message(undefined, action)

@@ -1,18 +1,20 @@
 import * as actionTypes from 'constants/actionTypes';
+import { API_ENDPOINT } from 'constants/app';
+import 'whatwg-fetch';
 
 let nextMessageId = 0;
 
-export function createMessage(message) {
+export function sendClientMessage(message) {
   return {
-    type: actionTypes.CREATE_MESSAGE,
+    type: actionTypes.SEND_CLIENT_MESSAGE,
     id: nextMessageId++,
     message
   };
 }
 
-export function receiveMessage(message) {
+export function receiveServerMessage(message) {
   return {
-    type: actionTypes.RECEIVE_MESSAGE,
+    type: actionTypes.RECEIVE_SERVER_MESSAGE,
     id: nextMessageId++,
     message
   };
@@ -20,25 +22,24 @@ export function receiveMessage(message) {
 
 export function postNewMessage(message) {
   return dispatch => {
-    let id = 'm_' + Date.now();
-    console.log(message);
-    let createdMessage = Object.assign({}, {id}, message);
-    dispatch(createMessage(createdMessage));
+    dispatch(sendClientMessage(message));
 
-    fetch('//prod.talktothetrex.com/api', {
+    fetch(API_ENDPOINT, {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(createdMessage)
+      body: JSON.stringify(message)
     })
       .then((response) => response.json())
       .then((data) => {
         if (data['messages']) {
           let messages = data['messages'];
-          messages.forEach(message => {
-            dispatch(receiveMessage(message));
+          messages.forEach((message, index) => {
+            setTimeout(() => {
+              dispatch(receiveServerMessage(messages.shift()));
+            }, (message['delay'] * index));
           });
         }
       });

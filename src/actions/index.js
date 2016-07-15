@@ -1,11 +1,11 @@
 import {
-  createMessage,
-  receiveMessage,
+  sendClientMessage,
+  receiveServerMessage,
   postNewMessage,
 } from './message';
 
 export {
-  createMessage,
-  receiveMessage,
+  sendClientMessage,
+  receiveServerMessage,
   postNewMessage,
 };
