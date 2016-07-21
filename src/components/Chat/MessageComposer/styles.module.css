@@ -13,10 +13,11 @@
 .messageComposer textarea {
   border-width: 0;
   outline: none;
-  width: 100%;
+  width: 82%;
   padding-top: 1.65rem;
   padding-bottom: 1rem;
   padding-left: 5rem;
+  padding-right: 5%;
 }
 
 .sendButton {
