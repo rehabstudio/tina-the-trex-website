@@ -7,10 +7,9 @@ export class Header extends React.Component {
   render() {
     return (
       <div className={styles.header}>
-        <div className={styles.headerText}>
-          <Link to="https://rehabstudio.com/">A +rehabstudio hackweek project</Link>
-        </div>
-        <div className={styles.makeItBetterText}>Making it better</div>
+        <div className={styles.ngLogo}></div>
+        <div className={styles.titleLogo}></div>
+        <div className={styles.rehabLogo}></div>
       </div>
     );
   }

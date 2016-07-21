@@ -17,12 +17,22 @@ class MessageListItem extends React.Component {
       server: message.sender == SERVER_USER_NAME
     });
 
-    return (
-      <li className={listItem}>
-        <Profile sender={message.sender} />
-        <p className={styles.messageText}>{message.text}</p>
-      </li>
-    );
+    if (message.sender == CLIENT_USER_NAME) {
+      return (
+        <li className={listItem}>
+          <div className={styles.filler}></div>
+          <p className={styles.messageText}>{message.text}</p>
+        </li>
+      );
+    } else {
+      return (
+        <li className={listItem}>
+          <Profile sender={message.sender} class={styles.profile}/>
+          <p className={styles.messageText}>{message.text}</p>
+          <div className={styles.filler}></div>
+        </li>
+      );
+    }
   }
 
 }

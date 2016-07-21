@@ -16,13 +16,14 @@ class MessageComposer extends React.Component {
       <div className={styles.messageComposer}>
         <div>
           <input
+            className={styles.messageInput}
             name='message'
-            placeholder='Type message'
+            placeholder='Type here to chat with T.Rex'
             value={this.state.text}
             onChange={this._onChange.bind(this)}
             onKeyDown={this._onKeyDown.bind(this)}
           />
-          <svg className={styles.sendButton} fill="#64ffda" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <svg className={styles.sendButton} fill="#99B2D4" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 0h24v24H0z" fill="none"></path>
             <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"></path>
           </svg>

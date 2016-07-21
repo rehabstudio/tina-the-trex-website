@@ -1,20 +1,16 @@
 .profileContainer {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  width: 100%;
-  max-width: 460px;
+  width: 4em;
+  height: 4em;
 }
 
 .profile {
-  max-width: 105px;
-  display: table-cell;
-  vertical-align: middle;
-  height: 5rem;
-  width: 5rem;
+  height: 100%;
+  width: 100%;
 }
 
 .user {
+  height: 0;
+  width: 0;
 }
 
 .trex {
