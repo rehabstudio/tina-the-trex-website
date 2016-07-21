@@ -15,7 +15,7 @@ class MessageComposer extends React.Component {
     return (
       <div className={styles.messageComposer}>
         <div>
-          <input
+          <textarea
             className={styles.messageInput}
             name='message'
             placeholder='Type here to chat with T.Rex'

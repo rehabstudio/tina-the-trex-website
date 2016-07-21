@@ -26,8 +26,9 @@ var config = getConfig({
     return {
       'index.html': context.defaultTemplate({
         title: 'Tina the T-Rex',
-        publicPath: isDev ? 'http://localhost:3000/' : '',
-        meta: {}
+        publicPath: isDev ? 'http://0.0.0.0:3000/' : '',
+        meta: {},
+        head: '<script src="https://use.typekit.net/jub7uoj.js"></script><script>try{Typekit.load({ async: true });}catch(e){}</script>'
       })
     };
   }

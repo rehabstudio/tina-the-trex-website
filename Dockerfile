@@ -5,9 +5,14 @@ RUN cd /tmp && npm install
 
 RUN mkdir -p /client && cp -a /tmp/node_modules /client
 
-WORKDIR /client
 ADD . /client
+WORKDIR /client
+
+RUN npm run build
+
+
+RUN npm install -g http-server
 
 EXPOSE 3000
 
-CMD ["npm", "start"]
+CMD ["http-server", "dist/", "-a", "0.0.0.0", "-p", "3000"]

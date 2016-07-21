@@ -10,7 +10,7 @@
   position: relative;
 }
 
-.messageComposer input {
+.messageComposer textarea {
   border-width: 0;
   outline: none;
   width: 100%;
