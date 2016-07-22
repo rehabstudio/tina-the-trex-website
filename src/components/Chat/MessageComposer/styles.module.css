@@ -16,8 +16,9 @@
   width: 82%;
   padding-top: 1.65rem;
   padding-bottom: 1rem;
-  padding-left: 5rem;
+  padding-left: 1rem;
   padding-right: 5%;
+  resize: none;
 }
 
 .sendButton {
@@ -27,4 +28,11 @@
   bottom: 0;
   right: 1rem;
   margin: auto;
+}
+
+
+@media (min-width: 640px) {
+  .messageComposer textarea {
+    padding-left: 7.4rem;
+  }
 }

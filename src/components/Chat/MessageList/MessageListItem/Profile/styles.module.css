@@ -1,6 +1,7 @@
 .profileContainer {
   width: 4em;
   height: 4em;
+  min-width: 4em;
 }
 
 .profile {
@@ -26,4 +27,12 @@
   font-size: 1.250rem;
   padding: 0 0.5rem;
   margin: 0 0 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .profileContainer {
+    width: 5em;
+    height: 5em;
+    min-width: 5em;
+  }
 }

@@ -1,4 +1,5 @@
 .listItem {
+  padding: 0 1em;
   margin: 0.6em auto;
   display: flex;
 }

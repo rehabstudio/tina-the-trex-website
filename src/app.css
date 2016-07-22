@@ -8,10 +8,22 @@ html, body {
   line-height: 2.1;
   background: #fff;
   color: #121212;
-  font-size: 0.92em;
+  font-size: 0.82em;
   font-family: 'proxima-nova', 'Quick-Regular', sans-serif;
 }
 
 body > div {
   height: 100%;
+}
+
+
+@media (min-width: 460px) {
+  html, body {
+    font-size: 0.86em;
+  }
+}
+@media (min-width: 640px) {
+  html, body {
+    font-size: 0.92em;
+  }
 }

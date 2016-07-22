@@ -16,7 +16,7 @@
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-between;
-  height: 22px;
+  height: 30px;
   box-shadow: 0px 4px 24px -3px rgba(0,0,0,0.41);
 }
 
@@ -53,7 +53,7 @@
 
 @media (min-width: 460px) {
   .header {
-    height: 36px;
+    height: 40px;
   }
 }
 
