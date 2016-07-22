@@ -7,9 +7,20 @@ export class Header extends React.Component {
   render() {
     return (
       <div className={styles.header}>
-        <div className={styles.ngLogo}></div>
-        <div className={styles.titleLogo}></div>
-        <div className={styles.rehabLogo}></div>
+        <a 
+            className={styles.ngLogo}
+            href="https://www.facebook.com/ngkids"
+        ></a>
+        <div className={styles.padder}></div>
+        <a 
+            className={styles.titleLogo}
+            href="/"
+        ></a>
+        <div className={styles.padder}></div>
+        <a 
+            className={styles.rehabLogo}
+            href="https://www.rehabstudio.com"
+        ></a>
       </div>
     );
   }

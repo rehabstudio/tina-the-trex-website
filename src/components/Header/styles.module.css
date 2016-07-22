@@ -47,6 +47,9 @@
   height: 100%;
 }
 
+.padder {
+  flex: 1;
+}
 
 @media (min-width: 460px) {
   .header {
