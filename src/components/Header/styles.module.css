@@ -1,7 +1,11 @@
 @import url("../../styles/fonts.css");
 
 .header {
-  background-color: #000000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: calc(100% - 2rem);
+  background: transparent;
   color: #FFFFFF;
   font-family: 'Apercu-Regular', Calibri, sans-serif;
   font-size: 0.98rem;
@@ -12,27 +16,51 @@
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-between;
+  height: 30px;
+  box-shadow: 0px 4px 24px -3px rgba(0,0,0,0.41);
 }
 
-.header a {
-  color: #FFFFFF;
-  text-decoration: none;
+.ngLogo {
+  flex: 1;
+  background-image: url(assets/images/ngLogo.png);
+  background-size: auto 80%;
+  background-position: left center;
+  background-repeat: no-repeat;
+  height: 100%;
 }
 
-.header > div {
-  max-width: 460px;
+.titleLogo {
+  flex: 1;
+  background-image: url(assets/images/titleLogo.png);
+  background-size: auto 90%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100%;
 }
 
-.headerText{
+.rehabLogo {
+  flex: 1;
+  background-image: url(assets/images/rehabLogo.png);
+  background-size: auto 50%;
+  background-position: right center;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+.padder {
   flex: 1;
 }
 
-@media only screen and (max-width: 480px){
-  .makeItBetterText {
-    display: none;
-  }
+@media (min-width: 460px) {
   .header {
-    font-size: 0.8rem;
-
+    height: 40px;
   }
 }
+
+@media (min-width: 640px) {
+  .header {
+    height: 50px;
+    box-shadow: none;
+  }
+}
+

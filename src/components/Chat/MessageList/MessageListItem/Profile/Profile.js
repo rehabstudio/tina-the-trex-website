@@ -19,7 +19,6 @@ class Profile extends React.Component {
     return (
       <div className={styles.profileContainer}>
         <div className={profile}></div>
-        <p className={styles.sender}>{sender}</p>
       </div>
     );
   }

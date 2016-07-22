@@ -1,24 +1,7 @@
 .chatContainer {
-  background-image: url(assets/images/TRex_BG_1920_1080.jpg);
-  background-size: cover;
-  background-position: center center;
   display: flex;
-  height: 100%;
+  flex: 1;
   flex-direction: column;
   flex-flow: column nowrap;
   -webkit-overflow-scrolling: touch;
-}
-
-@media (max-width: 960px) {
-  .chatContainer {
-    background-image: url(assets/images/TRex_BG_960_640.jpg);
-    background-size: cover;
-  }
-}
-
-@media (max-width: 640px) {
-  .chatContainer {
-    background-image: url(assets/images/TRex_BG_640_960.jpg);
-    background-size: cover;
-  }
 }

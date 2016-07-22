@@ -6,25 +6,27 @@ import styles from './styles.module.css';
 
 class MessageList extends React.Component {
   componentWillUpdate(nextProps, nextState) {
-    let node = ReactDOM.findDOMNode(this.refs.messageList);
+    let node = ReactDOM.findDOMNode(this.refs.scrollWrapper);
     this.shouldScrollBottom = node.scrollTop + node.offsetHeight === node.scrollHeight;
   }
 
   componentDidUpdate(prevProps, prevState) {
-    if (this.shouldScrollBottom) {
-      let node = ReactDOM.findDOMNode(this.refs.messageList);
-      node.scrollTop = node.scrollHeight;
-    }
+    let node = ReactDOM.findDOMNode(this.refs.scrollWrapper);
+    node.scrollTop = node.scrollHeight;
   }
 
   render() {
     const { messages } = this.props;
 
     return (
-      <div className={styles.chatBox} ref="messageList">
-        <ul className={styles.messageList}>
-          { messages.map(this.renderItem) }
-        </ul>
+      <div className={styles.chatBox}>
+          <div className={styles.listWrapper}>
+              <div className={styles.scrollWrapper} ref="scrollWrapper">
+                <ul className={styles.messageList}>
+                  { messages.map(this.renderItem) }
+                </ul>
+              </div>
+          </div>
       </div>
     );
   }

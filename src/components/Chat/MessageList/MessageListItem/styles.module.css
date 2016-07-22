@@ -1,26 +1,38 @@
 .listItem {
-  max-width: 460px;
-  margin: 0 auto;
+  padding: 0 1em;
+  margin: 0.6em auto;
+  display: flex;
 }
 
 .client {
-  text-align: right;
+  justify-content: flex-end;
 }
 
-.server {
+.client > .messageText {
+  border-radius: 1.8rem;
+  border-top-right-radius: 0.1rem;
+  background: #519BD5;
+  color: #fff;
+}
 
+.server > .messageText {
+  border-radius: 1.8rem;
+  border-top-left-radius: 0.1rem;
 }
 
 .messageText {
-  padding: 0.5rem 1rem;
+  max-width: calc(590px - 8.0em);
+  padding: 0.8rem 1.6rem;
   background: #FFFFFF;
   display: inline-block;
-  border-radius: 0.4rem;
-  border-top-left-radius: 0.1rem;
+  margin: 0 0.6em;
+}
+
+.filler {
+  flex: 1;
 }
 
 @media (min-width: 460px) {
   .listItem {
-    max-width: 590px;
   }
 }
