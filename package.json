@@ -7,7 +7,6 @@
     "clean": "rimraf dist",
     "build": "npm run clean && cross-env NODE_ENV=production webpack",
     "publish_pages": "./node_modules/.bin/gh-pages -d dist",
-    "ghpages": "npm run build && npm run publish_pages",
     "test": "cross-env NODE_ENV=test ./node_modules/karma/bin/karma start karma.conf.js",
     "test:watch": "npm run test -- --watch"
   },

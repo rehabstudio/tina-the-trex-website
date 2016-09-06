@@ -11,19 +11,9 @@ describe('<Header />', () => {
     wrapper = shallow(<Header />)
   });
 
-  it('contains a title component with yelp', () => {
+  it('contains a title component', () => {
     expect(wrapper.find('h1').first().text())
         .to.equal('client')
-  });
-
-  it('contains topbar styling', () => {
-    expect(wrapper.find(`.${styles.topbar}`))
-      .to.have.length(1);
-  })
-
-  it('contains a section menu with the title', () => {
-    expect(wrapper.find('section').first().text())
-        .to.equal('Fullstack.io')
   });
 
 })
