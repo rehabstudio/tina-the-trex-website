@@ -4,8 +4,9 @@
   "description": "",
   "scripts": {
     "start": "cross-env NODE_ENV=development ./node_modules/.bin/hjs-dev-server",
-    "clean": "rimraf dist",
     "build": "npm run clean && cross-env NODE_ENV=production webpack",
+    "clean": "rimraf dist",
+    "deploy": "npm run build && node ./ops/deploy.js",
     "publish_pages": "./node_modules/.bin/gh-pages -d dist",
     "test": "cross-env NODE_ENV=test ./node_modules/karma/bin/karma start karma.conf.js",
     "test:watch": "npm run test -- --watch"
@@ -64,6 +65,7 @@
     "postcss-loader": "^0.13.0",
     "precss": "^1.4.0",
     "react-addons-test-utils": "^15.3.2",
+    "s3": "^4.4.0",
     "sinon": "^1.17.6",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
