@@ -64,3 +64,12 @@
   }
 }
 
+@media (max-width: 600px) {
+  .titleLogo {
+    background-size: auto 70%;
+  }
+  .rehabLogo {
+    background-size: auto 40%;
+  }
+}
+

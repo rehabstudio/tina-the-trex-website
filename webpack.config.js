@@ -1,4 +1,4 @@
-const NODE_ENV = process.env.NODE_ENV;
+const NODE_ENV = process.env.NODE_ENV || 'production';
 const dotenv = require('dotenv');
 
 const webpack = require('webpack');
@@ -6,6 +6,8 @@ const path = require('path');
 
 const join = path.join;
 const resolve = path.resolve;
+
+const CompressionPlugin = require('compression-webpack-plugin');
 
 const getConfig = require('hjs-webpack');
 
@@ -25,8 +27,8 @@ var config = getConfig({
   html: function(context) {
     return {
       'index.html': context.defaultTemplate({
-        title: 'Tina the T-Rex',
-        publicPath: isDev ? 'http://0.0.0.0:3000/' : '',
+        title: 'Tina the T. rex',
+        publicPath: isDev ? 'http://0.0.0.0:3000/' : '/',
         meta: {},
         head: '<script src="https://use.typekit.net/jub7uoj.js"></script><script>try{Typekit.load({ async: true });}catch(e){}</script>'
       })
@@ -98,6 +100,9 @@ config.postcss = [].concat([
 ]);
 
 // END postcss
+
+// Compression
+config.plugins.push(new CompressionPlugin({test: /\.js$|\.html$/}));
 
 // Roots
 config.resolve.root = [src, modules];
