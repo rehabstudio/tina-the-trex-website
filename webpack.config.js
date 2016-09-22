@@ -20,7 +20,17 @@ const modules = join(root, 'node_modules');
 const dest = join(root, 'dist');
 const css = join(src, 'styles');
 
-var config = getConfig({
+const html = `<div id="root"></div>
+              <script>
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+                ga('create', 'UA-74779357-1', 'auto');
+                ga('send', 'pageview');
+              </script>`;
+
+let config = getConfig({
   isDev: isDev,
   in: join(src, 'app.js'),
   out: dest,
@@ -30,7 +40,8 @@ var config = getConfig({
         title: 'Tina the T. rex',
         publicPath: isDev ? 'http://0.0.0.0:3000/' : '/',
         meta: {},
-        head: '<script src="https://use.typekit.net/jub7uoj.js"></script><script>try{Typekit.load({ async: true });}catch(e){}</script>'
+        head: '<script src="https://use.typekit.net/jub7uoj.js"></script><script>try{Typekit.load({ async: true });}catch(e){}</script>',
+        html,
       })
     };
   }
